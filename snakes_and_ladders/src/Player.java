@@ -2,6 +2,7 @@ public class Player {
   private String name;
   private Square square = null;
 
+  private boolean dead = false;
   public Player(String name) {
     this.name = name;
   }
@@ -33,4 +34,8 @@ public class Player {
     square = square.moveAndLand(moves);
     square.enter(this);
   }
+
+  public void setDead(boolean d) { this.dead = d;}
+
+  private boolean isDead(){ return dead;}
 }
